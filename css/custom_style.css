@@ -1,0 +1,678 @@
+/*01 GENERALS*/
+/*02 HEADER*/
+/*03 MAIN CONTENT */
+/*04 FOOTER*/
+
+/*01 GENERALS*/
+
+body {
+	position: relative;
+	background: url("../img/bcg/background.jpg");
+	background-repeat: repeat;
+	font-family: "Oswald", sans-serif;
+	color: #212529;
+}
+
+.fake-hr-holder {
+	width: 150px;
+	height: 5px;
+	border-top: 2px solid rgba(255,255,255,.25);
+	border-bottom: 2px solid rgba(255,255,255,.25);
+}
+
+hr {
+	width: 40%;
+	background: whitesmoke;
+}
+
+.dummy-div {
+	height: 1px;
+}
+
+ul {
+	list-style: none;
+}
+
+/*fake separator-line with magnifier*/
+.fake-line {
+	max-width: 70%;
+	min-width: 300px;
+	margin: 9em 0 5em 0;
+}
+
+.fake-line-div-1 {
+	width: 35%;
+	height: 4px;
+	background: transparent;
+	border: 2px solid #212529;
+}
+
+.fake-line-div-2 {
+	width: 57px;
+	height: 57px;
+	margin-top: -26px;
+}
+
+/*02 HEADER*/
+
+/*navbar*/
+nav a:link, nav a:visited {
+	color: #212529;
+}
+
+nav a:hover {
+	text-decoration: none;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+}
+
+nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #212529;
+    transition: width .4s;
+    -webkit-transition: width .4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    transition: width .3s;
+    -webkit-transition: width .3s;
+}
+
+nav {
+	font-weight: 300;
+	opacity: 0;
+	height: 70px;
+	background: rgba(250, 250, 250, .9);
+	border-bottom: 2px solid #212529;
+}
+
+.custom-nav {
+	z-index: 999;
+}
+
+.logo-img-holder {
+	width: 130px;
+	height: 130px;
+	margin-top: 5.5em;
+}
+
+.nav-content-holder {
+	font-size: 1.5em;
+}
+
+.brand-holder {
+	top: 6px;
+	width: 55px;
+	height: auto;
+	left: 18px;
+}
+
+.nav-ul {
+	display: flex;
+}
+
+.button-holder {
+	top: 6px;
+	width: 55px;
+	height: auto;
+	right: 28px;
+	display: none;
+	cursor: pointer;
+}
+
+.hiddenNav-holder ul {
+	color: rgba(250, 250, 250, .9);
+	border-right: 1px solid rgba(250, 250, 250, .9);
+	border-bottom: 1px solid rgba(250, 250, 250, .9);
+}
+
+.hiddenNav-holder ul li a {
+	color: rgba(250, 250, 250, .9) !important;
+}
+
+.hiddenNav-holder ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: rgba(250, 250, 250, .9);
+    transition: width .4s;
+    -webkit-transition: width .4s;
+}
+
+.hiddenNav-holder ul li a:hover::after {
+    width: 100%;
+    transition: width .3s;
+    -webkit-transition: width .3s;
+}
+
+@media only screen and (max-width: 992px) {
+	.nav-ul {
+		display: none;
+	}
+
+	.button-holder {
+		display: block;
+	}
+
+	.brand-holder {
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	
+	/*small screen navigation*/
+	.showNav {
+		width: 50%;
+		min-width: 320px;
+		background: #212529;
+		font-size: 1.5em;
+		top: 70px;
+		left: 0 !important;
+		display: block;
+		border-right: 2px solid rgba(250, 250, 250, .9);
+		border-bottom: 2px solid rgba(250, 250, 250, .9);
+		transition: left 0.5s;
+		-webkit-transition: left 0.5s;
+		color
+	}
+
+	.hideNav {
+		width: 320px;
+		background: #212529;
+		font-size: 1.5em;
+		top: 70px;
+		left: -490px;
+		display: block;
+		border-right: 2px solid rgba(250, 250, 250, .9);
+		border-bottom: 2px solid rgba(250, 250, 250, .9);
+		transition: left 0.5s;
+		-webkit-transition: left 0.5s;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+		.hideNav {
+			display: none;
+		}
+}
+
+/*header main content*/
+.header-wrapper {
+	margin-top: -30px;
+}
+
+.main-title {
+	font: 300 1.5em "Oswald", sans-serif;
+	letter-spacing: .5em;
+	border: 4px double rgba(255,255,255,.25);
+	border-width: 4px 0;
+	padding: 1.5em 0em;
+	width: 80%;
+}
+  .main-title h1 {
+	font: 700 4em "Oswald", sans-serif;
+  	letter-spacing: 0;
+  	padding: .25em 0 .325em;
+	text-shadow: 0 0 80px rgba(255,255,255,.5);
+}
+
+.social-icons p {
+	font-size: 27px;
+	width: 70px;
+	color: #212529;
+	background: linear-gradient(to left, transparent 50%, #212529 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+}
+
+.social-icons p:hover {
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	color: lightgray;
+	background-position: left bottom;
+	border-bottom: 1px solid white !important;
+}
+
+.rvs-link {
+	font-weight: 700;
+}
+
+.subheader-quote p i {
+	font-size: 32px;
+	text-shadow:
+   			   -1px -1px 0 rgba(227, 227, 237, 0.2),  
+    			1px -1px 0 rgba(227, 227, 237, 0.2),
+				1px 1px 0 rgba(227, 227, 237, 0.2),
+    			1px 1px 0 rgba(227, 227, 237, 0.2);
+}
+
+.subheader-quote h3 {
+	width: 65%;
+	line-height: 100px;
+	font-size: 55px;
+	text-shadow:
+   				-1px -1px 0 rgba(227, 227, 237, 0.2),  
+    			 1px -1px 0 rgba(227, 227, 237, 0.2),
+   				-1px 1px 0 rgba(227, 227, 237, 0.2),
+    			 1px 1px 0 rgba(227, 227, 237, 0.2);
+}
+
+.subheader-img-holder {
+	width: 50%;
+	min-width: 300px;
+}
+
+/*head img animation*/
+
+/*.subheader-img-holder {
+    animation-name: rotate; 
+    animation-duration: 11s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to { 
+    transform: rotate(360deg);
+  }
+}*/
+
+/*03 MAIN CONTENT */
+
+/*autorska prava*/
+
+.section-title {
+	width: 92%;
+}
+.section-title h3 {
+	/*color: #1F1D35;*/
+	font-size: 55px;
+}
+
+.autorska-prava-sekcija-title h3 {
+	font-size: 2.5em;
+}
+
+.main-content-section1-wrapper {
+	background: rgba(005, 005, 005, 0.5);
+	width: 92%;
+	min-height: 420px;
+}
+
+.autorska-prava-sekcija-img-holder {
+	width: 350px;
+	height: 350px;
+	margin-top: 25px;
+	margin-left: 25px;
+	background: whitesmoke;
+}
+
+.autorska-prava-sekcija-img {
+	width: 350px;
+	height: 350px;
+	top: 22px;
+	left: 22px;
+}
+
+.autorska-prava-sekcija-p,
+.autorska-prava-sekcija-p-link {
+	font-weight: 300;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	color: whitesmoke;
+}
+
+.autorska-prava-sekcija-p-link {
+	cursor: pointer;
+	width: 150px;
+}
+
+/*usluge*/
+
+.serviceBox{
+    padding: 25px 30px;
+    background: rgba(005, 005, 005, 0.5);
+    font-weight: 300;
+	font-size: 1.2em;
+	letter-spacing: 1px;
+	color: whitesmoke;
+}
+
+.serviceBox .service-icon{
+    width: 170px;
+    height: 170px;
+    border-radius: 7px;
+    background: rgba(42, 46, 58, 0.5);
+    margin-bottom: 20px;
+}
+
+.serviceBox .title{
+    font-size: 40px;
+    font-weight: 300;
+    color: rgba(255, 255, 255);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width:990px) {
+    .serviceBox { 
+    	margin-bottom: 30px; 
+    }
+}
+
+/*o ognjenu*/
+
+.o-meni-left-area {
+	height: 100%;
+	background: url('../img/o-meni-bcg.jpg');
+	-webkit-background-size: cover;
+	background-size: cover;
+} 
+
+.o-meni-right-area {
+	background: #1F1D35;
+	font-weight: 300;
+	letter-spacing: 1px;
+	color: whitesmoke;
+}
+
+.o-meni-lg-border {
+	border-left: 1px solid whitesmoke;
+}
+
+.o-meni-right-area p {
+	font-size: 1.2em;
+}
+
+.o-meni-right-area h2,
+.o-meni-right-area h3,
+.o-meni-right-area h3 {
+	font-weight: 300;
+	/*color: #212529;
+	text-shadow:
+   			   -1px -1px 0 rgba(255, 255, 255, .3),  
+    			1px -1px 0 rgba(255, 255, 255, .3),
+				1px 1px 0 rgba(255, 255, 255, .3),
+    			1px 1px 0 rgba(255, 255, 255, .3);*/
+}
+
+.o-meni-right-area h2 {
+	font-size: 40px;
+}
+
+/*04 FOOTER*/
+
+.footer-wrapper {
+	background: #212529;
+	color: whitesmoke;
+	font-size: 22px;
+	font-weight: 300;
+}
+
+.footer-right-area,
+.footer-left-area,
+.footer-center-area {
+	height: 292px;
+}
+
+.footer-left-area ul {
+	max-width: 370px;
+	min-width: 280px;
+}
+
+.footer-logo {
+	width: 80px;
+	height: auto;
+}
+
+footer a {
+	color: whitesmoke !important;
+	text-decoration: none !important;
+}
+
+footer a:hover {
+	letter-spacing: 1px;
+	transition: letter-spacing .5s;
+	-webkit-transition: letter-spacing .5s;
+}
+
+footer .social-icons p {
+	font-size: 27px;
+	width: 70px;
+	color: whitesmoke;
+	background: linear-gradient(to left, transparent 50%, whitesmoke 50%);
+	background-size: 200% 100%;
+	background-position: right bottom;
+}
+
+footer .social-icons p:hover {
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	color: #212529;
+	background-position: left bottom;
+	border-bottom: 1px solid #212529 !important;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 767px) and (max-width: 878px) {
+	.main-title {
+		font: 300 1.3em "Oswald", sans-serif;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	
+	/* GENERALS */
+
+	/*fake separator-line with magnifier*/
+	.fake-line {
+		margin: 4.9em 0 1.9em 0;
+	}
+
+	.fake-line-div-2 {
+		width: 47px;
+		height: 47px;
+		margin-top: -22px;
+	}
+
+	/* HEADER */
+	.logo-img-holder {
+		width: 110px;
+		height: 110px;
+	}
+
+	.main-title {
+		font: 300 1.2em "Oswald", sans-serif;
+		letter-spacing: .3em;
+		border-top: 4px double rgba(255,255,255,.25);
+		border-bottom: 4px double rgba(255,255,255,.25);
+		width: 100%;
+	}
+
+	.main-title span {
+		display: none;
+	}
+	 
+	.main-title h1 {
+		font: 700 3em "Oswald", sans-serif;
+	}
+
+	.social-icons p {
+		font-size: 23px;
+		width: 50px;
+	}
+
+	/* SUBHEADER */
+
+	.subheader-quote p i {
+		font-size: 16px;
+	}
+
+	.subheader-quote h3 {
+		width: 65%;
+		font-size: 2em;
+		line-height: 50px;
+	}
+
+	.subheader-img-holder {
+		width: 50%;
+		min-width: 300px;
+	}
+
+	/* MAIN CONTENT AREA */
+
+	/* AUTORSKA PRAVA */
+	
+	.section-title h3 {
+		font-size: 2.3em;
+	}
+
+	.autorska-prava-sekcija-title h3 {
+		font-size: 2.5em;
+	}
+
+	.autorska-prava-sekcija-img-holder {
+		width: 270px;
+		height: 270px;
+		margin-top: 12px;
+		margin-left: 12px;
+	}
+
+	.autorska-prava-sekcija-img {
+		width: 270px;
+		height: 270px;
+		top: 12px;
+		left: 12px;
+	}
+
+	.autorska-prava-sekcija-p,
+	.autorska-prava-sekcija-p-link {
+		font-weight: 300;
+		font-size: 1em;
+		letter-spacing: 1px;
+	}
+
+	/* USLUGE */
+
+	.serviceBox{
+	    font-weight: 300;
+		font-size: 1em;
+		letter-spacing: 1px;
+	}
+
+	.serviceBox .service-icon{
+	    width: 130px;
+	    height: 130px;
+	}
+
+	.serviceBox .title{
+	    font-size: 2em;
+	}
+
+	/* FOOTER */
+
+	footer .social-icons p {
+		font-size: 23px;
+		width: 50px;
+	}
+}
+
+/*O OGNJENU SPEC HUCKS TRIPS N CHIPS...*/
+
+.o-ognjenu-naslovi-sm {
+		display: none;
+}
+
+@media only screen and (min-width: 767px) and (max-width: 768px) {
+	.o-meni-left-area {
+		display: none;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.o-meni-left-area {
+		display: block;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	/* O OGNJENU */
+	
+	.suit-img-h {
+		height: 340px;
+	}
+
+	.suit-img-holder-background {
+		background: #1F1D35;
+		display: block;
+	}
+	
+	.o-meni-left-area {
+		height: 350px;
+		background-repeat: no-repeat;
+	}
+
+	.o-ognjenu-naslovi-lg {
+		display: none;
+	}
+
+	.o-ognjenu-naslovi-sm {
+		display: block;
+	}
+
+	.o-meni-lg-border {
+		border-left: none;
+	}
+
+	.o-meni-right-area p {
+		font-size: 1em;
+	}
+	
+	.o-ognjenu-title-holder {
+		top: 20px;
+		left: 0;
+	}
+	.o-meni-right-area h2,
+	.o-meni-right-area h4,
+	.o-meni-right-area h4 {
+		font-weight: 300;
+		/*color: #212529;
+		text-shadow:
+	   			   -1px -1px 0 rgba(255, 255, 255, .3),  
+	    			1px -1px 0 rgba(255, 255, 255, .3),
+					1px 1px 0 rgba(255, 255, 255, .3),
+	    			1px 1px 0 rgba(255, 255, 255, .3);*/
+	}
+
+	.o-meni-right-area h2 {
+		font-size: 30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
